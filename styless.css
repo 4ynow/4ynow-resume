@@ -1,1 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #030c16;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem, 2rem;
+    background-color: #030c16;
+    box-sizing: border-box;
+    z-index: 100;
+    box-shadow: 0 0 5px 2px rgb(39, 215, 0);
+}
+
+.navBar {
+    padding-left: 25px;
+}
+
 

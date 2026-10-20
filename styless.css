@@ -7,24 +7,86 @@ body {
     text-align: center;
 }
 
+#line {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #333, #ccc);
+    width: 100%;
+    max-width: 800px;
+    margin: 25px auto;
+    box-sizing: border-box;
+    box-shadow:
+    0 0 6px rgba(127, 212, 255, 0.8),
+    0 0 14px rgba(127, 212, 255, 0.5);
+}
 
-.container {
-    position: fixed;
+
+.nav-container {
+    position: sticky;
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem, 2rem;
     background-color: #030c16;
     box-sizing: border-box;
     z-index: 100;
-    box-shadow: 0 0 5px 2px rgb(39, 215, 0);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.navlinks {
+    display: flex;
+    padding-right: 25px;
+    gap: 20px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navlinks a:hover {
+    color: #7fd4ff; 
 }
 
 .navBar {
     padding-left: 25px;
 }
 
+.logo {
+    padding: 15px;
+    padding-top: 20px;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
 
+.home-container {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.home-container h2 {
+    font-size: 3rem;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.about-container p {
+    font-size: 18px;
+}

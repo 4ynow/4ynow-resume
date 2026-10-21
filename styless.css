@@ -196,6 +196,7 @@ body {
     gap: 50px;             
     max-width: 1000px;       
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 
@@ -219,7 +220,8 @@ body {
 
 .about-text {
     flex: 1;                 
-    text-align: left;        
+    text-align: left; 
+    margin-top: 15px;       
 }
 
 .about-text p {
@@ -334,7 +336,6 @@ body {
     content: "_";
     animation: blink 1s step-end infinite;
 }
-
 
 @keyframes blink {
     50% { opacity: 0; }

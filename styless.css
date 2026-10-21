@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +14,7 @@ body {
     position: relative;
     color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
 #line {
@@ -112,6 +117,8 @@ body {
     background-position: center;
     opacity: 0.45; 
     z-index: -1;
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); 
+    mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
 }
 
 #home-head {
@@ -177,7 +184,6 @@ body {
 }
 
 .about-background {
-    max-height: 500px; 
     width: 100%;
     margin-top: 110px;
 }
@@ -200,7 +206,7 @@ body {
     height: 375px;
     width: 375px;           
     flex-shrink: 0;          
-    background-color: rgb(231, 230, 230);
+    background-color: #ffffff;
     border-radius: 40px;
     overflow: hidden;       
 }
@@ -224,4 +230,142 @@ body {
 
 .head-title {
     padding-top: 35px;
+}
+
+.skills-background {
+    min-height: 500px;
+    padding-top: 40px;
+}
+
+.skills-head-title {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    padding-bottom: 35px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    padding-left: 30px;
+    max-width: 1000px;
+}
+
+.skills-content {
+    padding-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+}
+
+.card {
+    height: 300px;
+    width: 250px;
+    background-color: #020a13;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+    color: rgba(127, 212, 255);
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 0 15px rgba(127, 212, 255, 0.4); 
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.project-background {
+    min-height: 500px;
+    padding-top: 40px;
+}
+
+.projects-head-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.cardP {
+    height: 300px;
+    width: 250px;
+    background-color: #020a13;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+    color: rgba(127, 212, 255);
+}
+
+.cardP:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 0 15px rgba(127, 212, 255, 0.4); 
+}
+
+.cardP p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 50px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 1000px;
+}
+
+#about, #skills, #projects {
+    scroll-margin-top: 100px;
+}
+
+#home-head::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; 
+    }
+    .skills-head-title {
+        justify-content: left;
+        text-align: left;
+        padding-left: 30px;
+    }
+    .about-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .about-icon-image {
+        width: 100%;
+        max-width: 375px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .projects-head-title {
+        justify-content: left;
+        text-align: left;
+        padding-left: 30px;
+    }
+    .projects-container {
+        grid-template-columns: 1fr; 
+    }
 }

@@ -1,3 +1,7 @@
-# 4ynow-resume
+# Personal Portfolio/Resume
 
-My resume. 
+A clean, responsive personal portfolio website built from scratch to showcase my skills, projects, and background in cybersecurity and full-stack development. 
+
+## 🛠️ Built With
+* **HTML5**
+* **CSS3** 

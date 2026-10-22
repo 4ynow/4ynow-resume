@@ -369,4 +369,11 @@ body {
     .projects-container {
         grid-template-columns: 1fr; 
     }
+    #line {
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    }
 }
